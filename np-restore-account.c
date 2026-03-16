@@ -55,7 +55,7 @@ int32_t sceRegMgrGetInt(uint32_t key, int32_t *value);
 int32_t sceRegMgrGetStr(uint32_t key, char *value, size_t size);
 int32_t sceRegMgrGetBin(uint32_t key, void *value, size_t size);
 
-/* Registry keys (same as np-fake-signin) */
+/* Registry keys*/
 #define REG_KEY_USERNAME      125829632   /* offset 0x04, str 17 */
 #define REG_KEY_ACCOUNT_ID    125830400   /* offset 0x100, bin 8 */
 #define REG_KEY_EMAIL         125830656   /* offset 0x108, str 65 */
