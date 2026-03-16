@@ -8,14 +8,11 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
-    container:
-      image: docker.io/psp2dev/psp2dev:latest
     steps:
       - uses: actions/checkout@v4
 
       - name: Install PS4 and PS5 Payload SDKs
         run: |
-          apt-get update && apt-get install -y wget unzip
           wget -q https://github.com/ps4-payload-dev/sdk/releases/latest/download/ps4-payload-sdk.zip
           wget -q https://github.com/ps5-payload-dev/sdk/releases/latest/download/ps5-payload-sdk.zip
           mkdir -p /opt/ps4-payload-sdk /opt/ps5-payload-sdk
