@@ -15,10 +15,12 @@ jobs:
 
       - name: Install PS4 and PS5 Payload SDKs
         run: |
-          apt-get update && apt-get install -y wget tar
+          apt-get update && apt-get install -y wget unzip
+          wget -q https://github.com/ps4-payload-dev/sdk/releases/latest/download/ps4-payload-sdk.zip
+          wget -q https://github.com/ps5-payload-dev/sdk/releases/latest/download/ps5-payload-sdk.zip
           mkdir -p /opt/ps4-payload-sdk /opt/ps5-payload-sdk
-          wget -qO- https://github.com/ps4-payload-dev/pacbrew-packages/releases/latest/download/ps4-payload-sdk.tar.gz | tar xz -C /opt/ps4-payload-sdk
-          wget -qO- https://github.com/ps5-payload-dev/sdk/releases/latest/download/ps5-payload-sdk.tar.gz | tar xz -C /opt/ps5-payload-sdk
+          unzip -q ps4-payload-sdk.zip -d /opt/ps4-payload-sdk
+          unzip -q ps5-payload-sdk.zip -d /opt/ps5-payload-sdk
 
       - name: Build PS4 ELF
         run: make build-ps4
