@@ -27,7 +27,7 @@ From a console signed in to PSN, extract these files:
 /user/home/<userid>/np/token.dat
 ```
 
-`<userid>` is the hex user ID of the signed-in account (e.g. `10000000`).
+`<userid>` is the hex user ID of the signed-in account.
 
 ## Step 2: Copy the files to the target console
 
@@ -45,7 +45,7 @@ Copy the files to the same paths on your jailbroken target console via FTP:
 /user/home/<userid>/np/token.dat
 ```
 
-Make sure `<userid>` matches the user ID on the target console.
+
 
 ## Step 3: Send the payload
 
